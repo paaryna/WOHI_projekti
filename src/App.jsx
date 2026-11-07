@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import HomePage from "./pages/HomePage";
-
+import OpeningExplorer from "./pages/OpeningExplorer";
 
 
 
@@ -18,11 +18,6 @@ import HomePage from "./pages/HomePage";
 
 function App() {
 
-  const [ratingHistory, setRatingHistory] = useState([]);
-  
-
-  
-  
   return (
     <main className="dashboard">
 
@@ -30,7 +25,7 @@ function App() {
 
       <nav className="navigation">
         <Link to="/home">Home</Link>
-        <Link to="/repertoire">Openings</Link>
+        <Link to="/openings">Openings</Link>
         <Link to="/training">Training?</Link>
       </nav>
 
@@ -41,9 +36,8 @@ function App() {
           element={<HomePage />}
         />
 
-        
-        <Route
-          path="/repertoire"
+      <Route
+          path="/openings"
           element={<OpeningExplorer />}
 
         />

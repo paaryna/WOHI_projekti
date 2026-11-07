@@ -5,6 +5,7 @@ function HomePage(){
     const [profile, setProfile] = useState(null);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [ratingHistory, setRatingHistory] = useState([]);
 
     async function handleSubmit(event){
         event.preventDefault();
