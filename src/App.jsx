@@ -4,11 +4,37 @@ import { useState } from "react";
 function App() {
   const [lichessUsername, setUsername] = useState("");
   const [profile, setProfile] = useState(null);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   
-  function handleSubmit(event){
+  async function handleSubmit(event){
     event.preventDefault();
+    
 
-    fetch()
+    setLoading(true);
+    setError("");
+    setProfile(null);
+
+    try {
+      const response = await fetch(
+        `https://lichess.org/api/user/${encodeURIComponent(lichessUsername.trim())}`
+    );
+      if (!response.ok){
+        throw new Error("User not found!");
+      }
+
+      const data = await response.json();
+
+      setProfile(data);
+    }
+    
+    
+      catch (error){
+        setError(error.message);
+        console.log(error.message);
+    }
+
+    setLoading(false);
   }
   
   
@@ -33,12 +59,12 @@ function App() {
 
               <form onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="username">Lichess username</label>
+                  <label htmlFor="lichessUsername">Lichess username</label>
 
                   <input
-                    id="username"
+                    id="lichessUsername"
                     type="text"
-                    value={username}
+                    value={lichessUsername}
                     onChange={(event) => setUsername(event.target.value)}
                     placeholder="Enter your username"
                   />
