@@ -86,11 +86,12 @@ input {
   color: white;
 }
 
+/* Profile search field + button*/
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 400px;
+  gap: 16px;
+  max-width: 420px;
   margin-top: 24px;
 }
 
@@ -98,4 +99,114 @@ form div {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+form label {
+  font-size: 14px;
+  color: #a0a6b5;
+}
+
+form input {
+  padding: 13px;
+  border: 1px solid #303644;
+  border-radius: 8px;
+  background: #1c2029;
+  color: white;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #b9e3a2;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #b9e3a2;
+  color: #111318;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #d0f0bf;
+}
+
+/* Player profile */
+
+.profile {
+  margin-top: 10px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.profile h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  color: #b9e3a2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.muted {
+  color: #a0a6b5;
+}
+
+/*Rating cards*/
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: #1c2029;
+  border: 1px solid #303644;
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.stat-card:hover {
+  border-color: #b9e3a2;
+  transform: translateY(-2px);
+}
+
+.stat-card p {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+
+
+@media (max-width: 650px) {
+  .rating-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
