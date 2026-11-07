@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
 function OpeningExplorer() {
@@ -7,9 +7,19 @@ function OpeningExplorer() {
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
 
+  const filteredOpenings = openings.filter((opening) => {
+  const searchTerm = search.toLowerCase();
+  const name = opening.name?.toLowerCase() ?? "";
+  const eco = opening.eco?.toLowerCase() ?? "";
+
+  return name.includes(searchTerm) || eco.includes(searchTerm);
+});
+  
+  
   async function fetchOpenings() {
     setLoading(true);
     setError("");
+
 
     try {
       const response = await fetch(
@@ -28,19 +38,20 @@ function OpeningExplorer() {
     }
 
     setLoading(false);
+
+
   }
 
-  const filteredOpenings = openings.filter((opening) =>
-  opening.name.toLowerCase().includes(search.toLowerCase()) ||
-  opening.eco.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(()=>{fetchOpenings();},[]);
+
+  
   
   
   return (
     
     <section>
       <h2>Opening Explorer</h2>
-      <p>Kirjotappa nimeä</p>
+      <p>Matching openings: {filteredOpenings.length}</p>
 
 
       <input
@@ -49,19 +60,22 @@ function OpeningExplorer() {
           value={search}
           onChange={(event) => setSearch(event.target.value)}
       />
+      
+      
 
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
       <div>
       {filteredOpenings.map((opening) => (
-        <p key={`${opening.eco}-${opening.name}`}>
-          <strong>{opening.eco}</strong> — {opening.name}
+        <p key={opening.url}>
+        {opening.name}
         </p>
         ))}
       </div>
     </section>
   );
+
 }
 
 export default OpeningExplorer;

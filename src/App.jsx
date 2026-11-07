@@ -1,14 +1,5 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
 import HomePage from "./pages/HomePage";
 import OpeningExplorer from "./pages/OpeningExplorer";
 
@@ -17,7 +8,9 @@ import OpeningExplorer from "./pages/OpeningExplorer";
 
 
 function App() {
-
+  const [lichessUsername, setUsername] = useState("");
+  const [profile, setProfile] = useState(null);
+  
   return (
     <main className="dashboard">
 
@@ -33,7 +26,7 @@ function App() {
       <Routes> 
         <Route
           path="/home"
-          element={<HomePage />}
+          element={<HomePage lichessUsername={lichessUsername} setUsername={setUsername} profile={profile} setProfile={setProfile}/>}
         />
 
       <Route

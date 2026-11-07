@@ -1,8 +1,7 @@
 import {useState} from "react";
 
-function HomePage(){
-    const [lichessUsername, setUsername] = useState("");
-    const [profile, setProfile] = useState(null);
+function HomePage({lichessUsername, setUsername, profile, setProfile}){
+    
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [ratingHistory, setRatingHistory] = useState([]);
@@ -91,6 +90,7 @@ function HomePage(){
                 <h3>Ratings</h3>
 
                 <div className="rating-grid">
+                  
                   <div className="stat-card">
                     <p className="muted">Rapid</p>
                     <h2>{profile.perfs?.rapid?.rating ?? "—"}</h2>
@@ -105,7 +105,21 @@ function HomePage(){
                     <p className="muted">Bullet</p>
                     <h2>{profile.perfs?.bullet?.rating ?? "—"}</h2>
                   </div>
+                
+                  <div className="stat-card">
+                    <p className="muted">Puzzles</p>
+                    <h2>{profile.perfs?.puzzle?.rating ?? "—"}</h2>
+                  </div>        
+
+                  <div className="stat-card">
+                    <p className="muted">Classical</p>
+                    <h2>{profile.perfs?.classical?.rating ?? "—"}</h2>
+                  </div>            
+                
+                
                 </div>
+
+
 
                 <h3>Game Statistics</h3>
 
