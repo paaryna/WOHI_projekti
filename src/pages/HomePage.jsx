@@ -21,26 +21,37 @@ function HomePage({profile}){
                   <div className="stat-card">
                     <p className="muted">Rapid</p>
                     <h2>{profile ? profile.perfs?.rapid?.rating ?? "—" : "?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.rapid?.games ?? "-" : "?"}</p>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Blitz</p>
                     <h2>{profile ? profile.perfs?.blitz?.rating ?? "—" : "?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.blitz?.games ?? "-" : "?"}</p>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Bullet</p>
                     <h2>{profile ? profile.perfs?.bullet?.rating ?? "—": "?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.bullet?.games ?? "-" : "?"}</p>
                   </div>
                 
                   <div className="stat-card">
                     <p className="muted">Puzzles</p>
                     <h2>{profile ? profile.perfs?.puzzle?.rating ?? "—" :"?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.puzzle?.games ?? "-" : "?"}</p>
                   </div>        
 
                   <div className="stat-card">
                     <p className="muted">Classical</p>
                     <h2>{profile ? profile.perfs?.classical?.rating ?? "—" : "?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.classical?.games ?? "-" : "?"}</p>
+                  </div>            
+                
+                  <div className="stat-card">
+                    <p className="muted">Correspondence</p>
+                    <h2>{profile ? profile.perfs?.correspondence?.rating ?? "—" : "?"}</h2>
+                    <p className="muted">Games: {profile ? profile.perfs?.correspondence?.games ?? "-" : "?"}</p>
                   </div>            
                 
                 
