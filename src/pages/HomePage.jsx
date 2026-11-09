@@ -76,7 +76,7 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
               
               {error && <p>{error}</p>}
 
-              {profile && (
+              
                 <section className="profile">
                 
 
@@ -86,27 +86,27 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
                   
                   <div className="stat-card">
                     <p className="muted">Rapid</p>
-                    <h2>{profile.perfs?.rapid?.rating ?? "—"}</h2>
+                    <h2>{profile ? profile.perfs?.rapid?.rating ?? "—" : "?"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Blitz</p>
-                    <h2>{profile.perfs?.blitz?.rating ?? "—"}</h2>
+                    <h2>{profile ? profile.perfs?.blitz?.rating ?? "—" : "?"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Bullet</p>
-                    <h2>{profile.perfs?.bullet?.rating ?? "—"}</h2>
+                    <h2>{profile ? profile.perfs?.bullet?.rating ?? "—": "?"}</h2>
                   </div>
                 
                   <div className="stat-card">
                     <p className="muted">Puzzles</p>
-                    <h2>{profile.perfs?.puzzle?.rating ?? "—"}</h2>
+                    <h2>{profile ? profile.perfs?.puzzle?.rating ?? "—" :"?"}</h2>
                   </div>        
 
                   <div className="stat-card">
                     <p className="muted">Classical</p>
-                    <h2>{profile.perfs?.classical?.rating ?? "—"}</h2>
+                    <h2>{profile ? profile.perfs?.classical?.rating ?? "—" : "?"}</h2>
                   </div>            
                 
                 
@@ -119,27 +119,27 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
                 <div className="game-grid">
                   <div className="stat-card">
                     <p className="muted">Total Games</p>
-                    <h2>{profile.count?.all ?? 0}</h2>
+                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Wins</p>
-                    <h2>{profile.count?.win ?? 0}</h2>
+                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Draws</p>
-                    <h2>{profile.count?.draw ?? 0}</h2>
+                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Losses</p>
-                    <h2>{profile.count?.loss ?? 0}</h2>
+                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
                   </div>
                 </div>
 
               </section>
-            )}
+            
 
             </>
         

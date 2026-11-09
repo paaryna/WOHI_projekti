@@ -44,18 +44,7 @@ button {
   margin-top: 0;
 }
 
-.training-button {
-  padding: 10px 16px;
-  color: #111318;
-  background: #b9e3a2;
-  border: 0;
-  border-radius: 8px;
-  font-weight: 600;
-}
 
-.training-button:hover {
-  background: #d0f0bf;
-}
 
 .navigation {
   display: flex;

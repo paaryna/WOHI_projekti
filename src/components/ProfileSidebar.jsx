@@ -13,23 +13,13 @@ function ProfileSidebar({ profile }) {
               </p>
             </div>
           </div>
-         
         </section>
-
-        
-
       ) : (
         <div className="profile-empty">
           <h3>No profile loaded</h3>
-        
         </div>
-      )
-      
-      
-      
-      }
+      )}
     </aside>
-    
   );
 }
 
