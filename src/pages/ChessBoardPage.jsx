@@ -61,11 +61,11 @@ return (
       {/* Side panel */}
       <div className="chess-sidebar">
         <div className="chess-controls">
-          <button onClick={undoMove} disabled={history.length === 0}>
+          <button className="boardButton" onClick={undoMove} disabled={history.length === 0}>
             Undo Move
           </button>
 
-          <button onClick={newGame}>
+          <button className="boardButton" onClick={newGame}>
             Reset Board
           </button>
         </div>

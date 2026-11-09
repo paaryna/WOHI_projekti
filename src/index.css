@@ -248,3 +248,13 @@ form button:hover {
   margin: 0;
   border-bottom: 1px solid #334155;
 }
+
+.boardButton {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #b9e3a2;
+  color: #111318;
+  font-weight: 700;
+  transition: background 0.2s;
+}
