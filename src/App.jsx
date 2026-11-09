@@ -1,9 +1,10 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
 import HomePage from "./pages/HomePage";
 import OpeningExplorer from "./pages/OpeningExplorer";
 import ChessBoardPage from "./pages/ChessBoardPage";
-
+import ProfileSidebar from "./components/ProfileSidebar";
 
 
 
@@ -13,12 +14,16 @@ function App() {
   const [profile, setProfile] = useState(null);
   
   return (
-    <main className="dashboard">
+    <div className="app-layout">
+      
+      <ProfileSidebar profile={profile} />
 
-      <h1>Shakki homma</h1>
+    <main className="main-content">
+    
+      
 
       <nav className="navigation">
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/openings">Openings</Link>
         <Link to="/chessBoard">Chess Board</Link>
       </nav>
@@ -26,7 +31,7 @@ function App() {
       
       <Routes> 
         <Route
-          path="/home"
+          path="/"
           element={<HomePage lichessUsername={lichessUsername} setUsername={setUsername} profile={profile} setProfile={setProfile}/>}
         />
 
@@ -42,6 +47,7 @@ function App() {
         />
       </Routes>
     </main>
+    </div>
   );
 }
 

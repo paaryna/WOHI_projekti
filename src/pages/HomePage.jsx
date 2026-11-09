@@ -78,14 +78,7 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
 
               {profile && (
                 <section className="profile">
-                  
-                  <div className="profile-header">
-                    <div>
-                      <p className="eyebrow">Profile</p>
-                      <h2>{profile.username}</h2>
-                      <p className="muted">Member since {new Date(profile.createdAt).toLocaleDateString()}</p>
-                    </div>
-                  </div>
+                
 
                 <h3>Ratings</h3>
 
