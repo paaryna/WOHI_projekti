@@ -2,6 +2,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import OpeningExplorer from "./pages/OpeningExplorer";
+import ChessBoardPage from "./pages/ChessBoardPage";
 
 
 
@@ -19,7 +20,7 @@ function App() {
       <nav className="navigation">
         <Link to="/home">Home</Link>
         <Link to="/openings">Openings</Link>
-        <Link to="/training">Training?</Link>
+        <Link to="/chessBoard">Chess Board</Link>
       </nav>
 
       
@@ -36,8 +37,8 @@ function App() {
         />
 
         <Route
-          path="/training"
-          element={<h2>joku kolmas</h2>}
+          path="/chessBoard"
+          element={<ChessBoardPage />}
         />
       </Routes>
     </main>

@@ -210,3 +210,41 @@ form button:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.chess-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1000px;
+}
+
+.chess-board-container {
+  width: 650px;
+  flex-shrink: 0;
+}
+
+.chess-sidebar {
+  flex: 1;
+  min-width: 180px;
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.chess-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.move-history {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.move-history p {
+  padding: 6px;
+  margin: 0;
+  border-bottom: 1px solid #334155;
+}
