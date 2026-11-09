@@ -4,7 +4,7 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
     
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-    const [ratingHistory, setRatingHistory] = useState([]);
+  
 
     async function handleSubmit(event){
         event.preventDefault();
@@ -26,23 +26,8 @@ function HomePage({lichessUsername, setUsername, profile, setProfile}){
 
         setProfile(data);
 
-        
-        //---------------This data not used anywhere yet
-        const historyResponse = await fetch(`https://lichess.org/api/user/${encodeURIComponent(lichessUsername.trim())}/rating-history`);
-
-        if ((!historyResponse.ok)) {
-            throw new Error("Ei onnistu nyt");
-
         }
-
-        const historyData = await historyResponse.json();
-
-        const rapidHistory = historyData.find((item) => item.name === "Rapid");
-
-        setRatingHistory(rapidHistory ? rapidHistory.points : []);
-
-        }
-        //----------------------------------------
+      
         
         catch (error){
             setError(error.message);
