@@ -1,65 +1,14 @@
-import {useState} from "react";
 
-function HomePage({lichessUsername, setUsername, profile, setProfile}){
+function HomePage({profile}){
     
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
+
   
-
-    async function handleSubmit(event){
-        event.preventDefault();
-        
-
-        setLoading(true);
-        setError("");
-        setProfile(null);
-
-        try {
-        const response = await fetch(
-            `https://lichess.org/api/user/${encodeURIComponent(lichessUsername.trim())}`
-        );
-        if (!response.ok){
-            throw new Error("User not found!");
-        }
-
-        const data = await response.json();
-
-        setProfile(data);
-
-        }
-      
-        
-        catch (error){
-            setError(error.message);
-            console.log(error.message);
-        }
-
-        setLoading(false);
-    }
-        
-        
-        
-        
         return (
 
             <>
-              <form onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="lichessUsername">Lichess username</label>
-
-                  <input
-                    id="lichessUsername"
-                    type="text"
-                    value={lichessUsername}
-                    onChange={(event) => setUsername(event.target.value)}
-                    placeholder="Enter your username"
-                  />
-                  <button type="submit">Load profile</button>
-                </div>
-                
-                </form>
               
-              {error && <p>{error}</p>}
+              
+              
 
               
                 <section className="profile">
