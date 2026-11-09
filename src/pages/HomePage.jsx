@@ -58,17 +58,17 @@ function HomePage({profile}){
 
                   <div className="stat-card">
                     <p className="muted">Wins</p>
-                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
+                    <h2>{profile ? profile.count?.win ?? 0 : "-"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Draws</p>
-                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
+                    <h2>{profile ? profile.count?.draw ?? 0 : "-"}</h2>
                   </div>
 
                   <div className="stat-card">
                     <p className="muted">Losses</p>
-                    <h2>{profile ? profile.count?.all ?? 0 : "-"}</h2>
+                    <h2>{profile ? profile.count?.loss ?? 0 : "-"}</h2>
                   </div>
                 </div>
 
