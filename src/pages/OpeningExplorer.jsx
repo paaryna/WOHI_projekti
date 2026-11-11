@@ -31,7 +31,6 @@ function OpeningExplorer() {
       }
 
       const data = await response.json();
-      console.log(data[0]);
       setOpenings(data);
 
     } catch (err) {
@@ -67,13 +66,28 @@ function OpeningExplorer() {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
-      <div>
-      {filteredOpenings.map((opening) => (
-        <p key={opening.url}>
-        {opening.name}
-        </p>
+      <div className="opening-list">
+        {filteredOpenings.map((opening) => (
+          <div className="opening-card" key={opening.url}>
+            <div className="opening-header">
+              <h3>{opening.name}</h3>
+
+            </div>
+
+            <p>
+              {opening.style} | Difficulty: {opening.difficulty}/5
+            </p>
+
+            <p>{opening.description}</p>
+
+            <details>
+              <summary>View opening moves</summary>
+              <p>{opening.moves}</p>
+            </details>
+          </div>
         ))}
       </div>
+
     </section>
   );
 

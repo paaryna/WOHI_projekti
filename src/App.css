@@ -182,3 +182,75 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* Opening Explorer */
+
+.opening-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.opening-card {
+  background: #242936;
+  border: 1px solid #3a4252;
+  border-radius: 12px;
+  padding: 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.opening-card:hover {
+  border-color: #6b8afd;
+  transform: translateY(-2px);
+}
+
+.opening-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.opening-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.opening-header button {
+  background: transparent;
+  border: none;
+  color: #f5c542;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.opening-header button:hover {
+  transform: scale(1.15);
+}
+
+.opening-card p {
+  color: #b8c0d0;
+  line-height: 1.5;
+}
+
+.opening-card details {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #3a4252;
+}
+
+.opening-card summary {
+  color: #8fa9ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.opening-card details p {
+  background: #1b202b;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+  line-height: 1.8;
+}
