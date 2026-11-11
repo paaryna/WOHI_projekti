@@ -21,50 +21,9 @@ button {
   cursor: pointer;
 }
 
-.dashboard {
-  width: min(100% - 32px, 1000px);
-  margin: 0 auto;
-  padding: 48px 0;
-}
-
 .subtitle {
   color: #a0a6b5;
   line-height: 1.6;
-}
-
-.panel {
-  margin-top: 28px;
-  padding: 24px;
-  background: #1c2029;
-  border: 1px solid #303644;
-  border-radius: 12px;
-}
-
-.panel h2 {
-  margin-top: 0;
-}
-
-
-
-.navigation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.navigation a {
-  padding: 10px 14px;
-  border: 1px solid #303644;
-  border-radius: 8px;
-  color: #e8eaf0;
-  text-decoration: none;
-  background: #1c2029;
-}
-
-.navigation a:hover {
-  border-color: #b9e3a2;
-  color: #b9e3a2;
 }
 
 input {
@@ -74,121 +33,6 @@ input {
   background: #1c2029;
   color: white;
 }
-
-/* Profile search field + button*/
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 420px;
-  margin-top: 24px;
-}
-
-form div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-form label {
-  font-size: 14px;
-  color: #a0a6b5;
-}
-
-form input {
-  padding: 13px;
-  border: 1px solid #303644;
-  border-radius: 8px;
-  background: #1c2029;
-  color: white;
-  outline: none;
-}
-
-form input:focus {
-  border-color: #b9e3a2;
-}
-
-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #b9e3a2;
-  color: #111318;
-  font-weight: 700;
-  transition: background 0.2s;
-}
-
-form button:hover {
-  background: #d0f0bf;
-}
-
-/* Player profile */
-
-.profile {
-  margin-top: 10px;
-}
-
-.profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-}
-
-.profile h3 {
-  margin-top: 32px;
-  margin-bottom: 16px;
-}
-
-.eyebrow {
-  color: #b9e3a2;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.muted {
-  color: #a0a6b5;
-}
-
-/*Rating cards*/
-
-.rating-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.stat-card {
-  background: #1c2029;
-  border: 1px solid #303644;
-  border-radius: 12px;
-  padding: 20px;
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.stat-card:hover {
-  border-color: #b9e3a2;
-  transform: translateY(-2px);
-}
-
-.stat-card p {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-.stat-card h2 {
-  margin-bottom: 0;
-  font-size: 28px;
-}
-
-
 
 @media (max-width: 650px) {
   .rating-grid {
@@ -200,78 +44,15 @@ form button:hover {
   }
 }
 
-.chess-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  max-width: 1000px;
-}
 
-.chess-board-container {
-  width: 650px;
-  flex-shrink: 0;
-}
 
-.chess-sidebar {
-  flex: 1;
-  min-width: 180px;
-  background: #1e293b;
-  padding: 16px;
-  border-radius: 12px;
-}
 
-.chess-controls {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
 
-.move-history {
-  max-height: 400px;
-  overflow-y: auto;
-}
 
-.move-history p {
-  padding: 6px;
-  margin: 0;
-  border-bottom: 1px solid #334155;
-}
 
-.boardButton {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #b9e3a2;
-  color: #111318;
-  font-weight: 700;
-  transition: background 0.2s;
-}
 
-.app-layout {
-  display: flex;
-  min-height: 100vh;
-  gap: 24px;
-  padding: 24px;
-}
 
-.profile-sidebar {
-  width: 280px;
-  flex-shrink: 0;
-  
-  padding: 20px;
-  border-radius: 12px;
-  align-self: flex-start;
-}
 
-.main-content {
-  flex: 1;
-  min-width: 0;
-}
 
-.navigation {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 24px;
-}
+
 
