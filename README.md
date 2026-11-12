@@ -2,9 +2,9 @@
 
 Install the following:
 
-- Node.js(https://nodejs.org/)
+- Node.js (https://nodejs.org/)
 - npm (included with Node.js)
-- Git(https://git-scm.com/)
+- Git (https://git-scm.com/)
 - Visual Studio Code (optional, any editor can be used)
 
 
@@ -15,7 +15,7 @@ Install the following:
 
 2. Navigate to the project directory:
 
-   cd <project-folder>
+   cd "project-folder"
   
 
 3. Install the project dependencies:
